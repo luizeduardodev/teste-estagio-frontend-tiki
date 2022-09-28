@@ -1,0 +1,184 @@
+@use "../../styles/variables.scss";
+
+.container-geral {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 8rem;
+    margin-bottom: 8rem;
+
+    background-color: variables.$bg-box-color;
+
+    .component-title {
+        font-size: variables.$font-size-36;
+        font-weight: bold;
+        color: variables.$bg-box-color;
+        text-transform: uppercase;
+
+        padding-top: 7rem;
+        margin-bottom: 4rem;
+
+        text-shadow: -1px -1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff,
+            1px 0px 0px #fff;
+    }
+
+    .icon-yellow {
+        margin-bottom: 5rem;
+    }
+
+    .image-spoilers {
+        margin-bottom: 13rem;
+        width: 755.34px;
+    }
+
+    .icon-arrow-down {
+        margin-bottom: 7rem;
+    }
+
+    .card-title {
+        font-size: variables.$font-size-14;
+        margin-bottom: 1.5rem;
+
+        color: variables.$color-white;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .container-image-out {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        position: relative;
+
+        cursor: pointer;
+
+        .image-carousel {
+            width: 100%;
+            max-width: 90rem;
+            border-radius: 4rem;
+            box-shadow: 0 0 0.1rem variables.$terciary-color;
+        }
+
+        .container-share-hover {
+            width: 100%;
+            max-width: 90rem;
+
+            visibility: hidden;
+            opacity: 0;
+
+            font-size: variables.$font-size-12;
+            border-radius: 0 0 3.84rem 3.84rem;
+
+            position: absolute;
+            bottom: 0;
+
+            font-weight: bold;
+            color: variables.$color-white;
+            background-color: #000;
+            transition: opacity 0.3s;
+
+            .container {
+                height: 7rem;
+                line-height: 0;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+            }
+        }
+
+        &:hover .container-share-hover {
+            visibility: visible;
+            opacity: 90%;
+        }
+    }
+
+    .container-carousel {
+        width: 100%;
+        margin-top: 3rem;
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .carousel-title {
+            margin-bottom: 1.5rem;
+
+            text-transform: uppercase;
+            color: variables.$color-white;
+            font-weight: bold;
+        }
+
+        .carousel-cards {
+            width: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            padding-inline: 3rem;
+            margin-bottom: 7rem;
+
+            .container-arrow {
+                width: 3.5rem;
+                height: 3rem;
+
+                margin-top: 3rem;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                box-shadow: 2px 2px 0 variables.$secondary-color;
+                border-radius: 50%;
+
+                background-color: #fff;
+                cursor: pointer;
+
+                svg {
+                    width: 10px;
+
+                    path {
+                        fill: variables.$bg-box-color;
+                    }
+                }
+            }
+
+            //Pagination;
+            .cVXxbE {
+                width: 1rem;
+                height: 1rem;
+
+                margin: 0.5rem;
+                border-radius: 50%;
+                box-shadow: none;
+
+                transition: all 250ms ease;
+                background-color: #fff;
+            }
+
+            .ezKHIn {
+                width: 1rem;
+                height: 1rem;
+
+                margin: 0.5rem;
+                border-radius: 50%;
+                opacity: 30%;
+                box-shadow: none;
+
+                transition: all 250ms ease;
+                background-color: #fff;
+            }
+        }
+    }
+}
