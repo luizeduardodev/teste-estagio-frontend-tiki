@@ -1,0 +1,20 @@
+@mixin displayFlex($display, $justify, $align, $flex) {
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $flex;
+}
+
+@mixin pagination($width, $height, $margin, $borderRadius, $boxShadow, $transition, $backgroundColor, $opacity) {
+    width: $width;
+    height: $height;
+
+    margin: $margin;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+
+    transition: $transition;
+    background-color: $backgroundColor;
+
+    opacity: $opacity;
+}
