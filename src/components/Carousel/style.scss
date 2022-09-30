@@ -1,12 +1,10 @@
 @use "../../styles/variables.scss";
+@use "../../styles/mixins.scss";
 
 .container-geral {
     width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include mixins.displayFlex(flex, center, center, column);
 
     border-radius: 8rem;
     margin-bottom: 8rem;
@@ -15,28 +13,15 @@
 
     .component-title {
         font-size: variables.$font-size-36;
-        font-weight: bold;
-        color: variables.$bg-box-color;
-        text-transform: uppercase;
 
         padding-top: 7rem;
-        margin-bottom: 4rem;
+        margin-bottom: 6rem;
 
+        color: variables.$bg-box-color;
         text-shadow: -1px -1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff,
             1px 0px 0px #fff;
-    }
-
-    .icon-yellow {
-        margin-bottom: 5rem;
-    }
-
-    .image-spoilers {
-        margin-bottom: 13rem;
-        width: 755.34px;
-    }
-
-    .icon-arrow-down {
-        margin-bottom: 7rem;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
     .card-title {
@@ -51,47 +36,39 @@
     .container-image-out {
         width: 100%;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
+        @include mixins.displayFlex(flex, center, center, column);
         position: relative;
-
-        cursor: pointer;
 
         .image-carousel {
             width: 100%;
-            max-width: 90rem;
+            max-width: 85rem;
             border-radius: 4rem;
+
             box-shadow: 0 0 0.1rem variables.$terciary-color;
+            cursor: pointer;
         }
 
         .container-share-hover {
             width: 100%;
-            max-width: 90rem;
+            max-width: 85rem;
 
             visibility: hidden;
             opacity: 0;
-
             font-size: variables.$font-size-12;
             border-radius: 0 0 3.84rem 3.84rem;
-
             position: absolute;
             bottom: 0;
 
             font-weight: bold;
             color: variables.$color-white;
-            background-color: #000;
             transition: opacity 0.3s;
+            background-color: #000;
 
             .container {
                 height: 7rem;
                 line-height: 0;
 
-                display: flex;
-                align-items: center;
-                justify-content: center;
+                @include mixins.displayFlex(flex, center, center, null);
                 gap: 1rem;
             }
         }
@@ -105,10 +82,9 @@
     .container-carousel {
         width: 100%;
         margin-top: 3rem;
+        margin-bottom: 6rem;
 
-        display: flex;
-        align-items: center;
-        flex-direction: column;
+        @include mixins.displayFlex(flex, null, center, column);
 
         .carousel-title {
             margin-bottom: 1.5rem;
@@ -121,63 +97,18 @@
         .carousel-cards {
             width: 100%;
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include mixins.displayFlex(flex, center, center, null);
             gap: 2rem;
 
             padding-inline: 3rem;
-            margin-bottom: 7rem;
-
-            .container-arrow {
-                width: 3.5rem;
-                height: 3rem;
-
-                margin-top: 3rem;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-
-                box-shadow: 2px 2px 0 variables.$secondary-color;
-                border-radius: 50%;
-
-                background-color: #fff;
-                cursor: pointer;
-
-                svg {
-                    width: 10px;
-
-                    path {
-                        fill: variables.$bg-box-color;
-                    }
-                }
-            }
 
             //Pagination;
             .cVXxbE {
-                width: 1rem;
-                height: 1rem;
-
-                margin: 0.5rem;
-                border-radius: 50%;
-                box-shadow: none;
-
-                transition: all 250ms ease;
-                background-color: #fff;
+                @include mixins.pagination(1rem, 1rem, 0.5rem, 50%, none, all 250ms ease, #fff, null);
             }
 
             .ezKHIn {
-                width: 1rem;
-                height: 1rem;
-
-                margin: 0.5rem;
-                border-radius: 50%;
-                opacity: 30%;
-                box-shadow: none;
-
-                transition: all 250ms ease;
-                background-color: #fff;
+                @include mixins.pagination(1rem, 1rem, 0.5rem, 50%, none, all 250ms ease, #fff, 30%);
             }
         }
     }

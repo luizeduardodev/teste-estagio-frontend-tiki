@@ -1,7 +1,8 @@
 import CarouselElastic, { consts } from "react-elastic-carousel";
 
-import Card from "../Card/Card";
-import Arrows from "./Arrows";
+import Card from "./Card/Card";
+import Arrows from "./Arrows/Arrows";
+import SvgImages from "./SvgImages/SvgImages";
 
 import iconYellow from "../../assets/svg/icon-yellow.svg";
 import titleOne from "../../assets/svg/tittle1.svg";
@@ -24,56 +25,16 @@ const Carousel = () => {
     const cards = [
         <Card title="16 de março" image={imageCard} className="card" />,
         <Card title="17 de março" image={imageCard2} className="card" />,
-
         <Card title="18 de março" image={imageCard3} className="card" />,
         <Card title="22 de março" image={imageCard4} className="card" />,
-
         <Card title="23 de março" image={imageCard} className="card" />,
         <Card title="24 de março" image={lock} className="lock" />,
-
         <Card title="25 de março" image={imageCard} className="card" />,
-        <Card title="26 de março" image={imageCard} className="card" />
+        <Card title="26 de março" image={lock} className="lock" />
     ];
 
     const myArrow = ({ type, onClick }) => {
-        const pointer =
-            type === consts.PREV ? (
-                <Arrows
-                    svg={
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="12.657"
-                            height="14.71"
-                            viewBox="0 0 12.657 14.71"
-                        >
-                            <path
-                                id="arrow-left"
-                                d="M7.355,0,14.71,12.657H0Z"
-                                transform="translate(0 14.71) rotate(-90)"
-                                fill="#fff"
-                            />
-                        </svg>
-                    }
-                />
-            ) : (
-                <Arrows
-                    svg={
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="12.657"
-                            height="14.71"
-                            viewBox="0 0 12.657 14.71"
-                        >
-                            <path
-                                id="arrow-right"
-                                d="M7.355,0,14.71,12.657H0Z"
-                                transform="translate(12.657) rotate(90)"
-                                fill="#fff"
-                            />
-                        </svg>
-                    }
-                />
-            );
+        const pointer = type === consts.PREV ? (<Arrows svg={<svg xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71" ><path id="arrow-left" d="M7.355,0,14.71,12.657H0Z" transform="translate(0 14.71) rotate(-90)" fill="#fff" /></svg>} />) : (<Arrows svg={<svg xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71" ><path id="arrow-right" d="M7.355,0,14.71,12.657H0Z" transform="translate(12.657) rotate(90)" fill="#fff" /></svg>} />);
 
         return (
             <div className="container-arrow" onClick={onClick}>
@@ -88,21 +49,9 @@ const Carousel = () => {
                 Cuidado, ao rolar pode conter...
             </h2>
 
-            <img
-                src={iconYellow}
-                alt="Icone com vários + amarelos"
-                className="icon-yellow"
-            />
-            <img
-                src={titleOne}
-                alt="Imagem com nome Spoilers"
-                className="image-spoilers"
-            />
-            <img
-                src={arrowDown}
-                alt="Icone de Seta para baixo"
-                className="icon-arrow-down"
-            />
+            <SvgImages icon={iconYellow} alt="Icone com vários + amarelos" classname="icon-yellow" />
+            <SvgImages icon={titleOne} alt="Imagem com nome Spoilers" classname="image-spoilers" />
+            <SvgImages icon={arrowDown} alt="Icone de Seta para baixo" classname="icon-arrow-down" />
 
             <p className="card-title">Você já estava sabendo?</p>
 
