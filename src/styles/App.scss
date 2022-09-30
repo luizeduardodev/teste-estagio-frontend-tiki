@@ -1,5 +1,6 @@
 @use "./reset.scss";
 @use "./variables.scss";
+@use "./mixins.scss";
 
 .container-general {
     width: 100%;
@@ -7,23 +8,34 @@
     background-image: url("../assets/images/Background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    // background-position: top bottom;
 
     .wrapper {
+        @include mixins.displayFlex(flex, center, center, column);
+
         width: 100%;
         max-width: 98rem;
         margin: 0 auto;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        padding-top: 5rem;
 
-        padding-block: 4rem;
-        
-        .brand {
-            width: 20%;
-            padding-bottom: 4rem;
+        // background-color: red;
+
+        .header {
+            width: 100%;
+            text-align: center;
+            
+            .brand {
+                width: 20%;
+                padding-bottom: 5rem;
+            }
+        }
+
+        .quero-fazer-parte {
+            margin-bottom: 6rem;
+        }
+
+        .icon-yelloww {
+            margin-bottom: 7rem;
         }
     }
 }
