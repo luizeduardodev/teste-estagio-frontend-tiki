@@ -1,4 +1,4 @@
-import "./style.scss"
+import "./style.scss";
 
 const SvgImages = ({ icon, alt, classname }) => {
     return (
