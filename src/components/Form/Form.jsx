@@ -9,7 +9,7 @@ const Form = () => {
     const [valueInputEmail, setValueInputEmail] = useState("");
     const [checkbox, setCheckbox] = useState(false);
 
-    function clickCheckbox() {
+    const clickCheckbox =() => {
         setCheckbox(!checkbox);
     }
 
