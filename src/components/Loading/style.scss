@@ -1,0 +1,9 @@
+@use "../../styles/mixins.scss";
+
+.img {
+    @include mixins.displayFlex(flex, center, center, null);
+
+    img {
+        width: 6rem;
+    }
+}
