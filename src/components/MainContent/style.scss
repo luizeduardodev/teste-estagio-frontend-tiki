@@ -1,0 +1,28 @@
+@use "../../styles/variables.scss";
+@use "../../styles/mixins.scss";
+
+#main-content {
+    width: 100%;
+
+    background-image: url("../../assets/images/Background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .wrapper {
+        @include mixins.displayFlex(flex, center, center, column);
+
+        width: 100%;
+        max-width: 98rem;
+        margin: 0 auto;
+
+        padding-top: 8rem;
+
+        .quero-fazer-parte {
+            margin-bottom: 8rem;
+        }
+
+        .icon-yelloww {
+            margin-bottom: 8rem;
+        }
+    }
+}
