@@ -11,7 +11,6 @@ import facebook from "../../assets/svg/facebook.svg";
 import linkedin from "../../assets/svg/linkedin.svg";
 import whatsapp from "../../assets/svg/whatsapp.svg";
 import twitter from "../../assets/svg/twitter.svg";
-
 import lock from "../../assets/svg/lock.svg";
 
 import imageCard from "../../assets/images/imagem.jpg";
@@ -34,7 +33,44 @@ const Carousel = () => {
     ];
 
     const myArrow = ({ type, onClick }) => {
-        const pointer = type === consts.PREV ? (<Arrows svg={<svg xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71" ><path id="arrow-left" d="M7.355,0,14.71,12.657H0Z" transform="translate(0 14.71) rotate(-90)" fill="#fff" /></svg>} />) : (<Arrows svg={<svg xmlns="http://www.w3.org/2000/svg" width="12.657" height="14.71" viewBox="0 0 12.657 14.71" ><path id="arrow-right" d="M7.355,0,14.71,12.657H0Z" transform="translate(12.657) rotate(90)" fill="#fff" /></svg>} />);
+        const pointer =
+            type === consts.PREV ? (
+                <Arrows
+                    svg={
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12.657"
+                            height="14.71"
+                            viewBox="0 0 12.657 14.71"
+                        >
+                            <path
+                                id="arrow-left"
+                                d="M7.355,0,14.71,12.657H0Z"
+                                transform="translate(0 14.71) rotate(-90)"
+                                fill="#fff"
+                            />
+                        </svg>
+                    }
+                />
+            ) : (
+                <Arrows
+                    svg={
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="12.657"
+                            height="14.71"
+                            viewBox="0 0 12.657 14.71"
+                        >
+                            <path
+                                id="arrow-right"
+                                d="M7.355,0,14.71,12.657H0Z"
+                                transform="translate(12.657) rotate(90)"
+                                fill="#fff"
+                            />
+                        </svg>
+                    }
+                />
+            );
 
         return (
             <div className="container-arrow" onClick={onClick}>
@@ -44,14 +80,26 @@ const Carousel = () => {
     };
 
     return (
-        <div className="container-geral">
+        <section id="container-geral">
             <h2 className="component-title">
                 Cuidado, ao rolar pode conter...
             </h2>
 
-            <SvgImages icon={iconYellow} alt="Icone com vários + amarelos" classname="icon-yellow" />
-            <SvgImages icon={titleOne} alt="Imagem com nome Spoilers" classname="image-spoilers" />
-            <SvgImages icon={arrowDown} alt="Icone de Seta para baixo" classname="icon-arrow-down" />
+            <SvgImages
+                icon={iconYellow}
+                alt="Icone com vários + amarelos"
+                classname="icon-yellow"
+            />
+            <SvgImages
+                icon={titleOne}
+                alt="Imagem com nome Spoilers"
+                classname="image-spoilers"
+            />
+            <SvgImages
+                icon={arrowDown}
+                alt="Icone de Seta para baixo"
+                classname="icon-arrow-down"
+            />
 
             <p className="card-title">Você já estava sabendo?</p>
 
@@ -96,11 +144,13 @@ const Carousel = () => {
                         itemsToScroll={4}
                         renderArrow={myArrow}
                     >
-                        {cards.map((card) => card)}
+                        {cards.length > 0 && cards.map((card) => (
+                            card
+                        ))}
                     </CarouselElastic>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 
