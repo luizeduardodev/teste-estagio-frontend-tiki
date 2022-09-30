@@ -1,0 +1,23 @@
+@use "../../../styles/variables.scss";
+@use "../../../styles/mixins.scss";
+
+.container-arrow {
+    @include mixins.displayFlex(flex, center, center, null);
+
+    width: 3.5rem;
+    height: 3rem;
+    margin-top: 3rem;
+
+    box-shadow: 0.2rem 0.2rem 0 variables.$secondary-color;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+
+    svg {
+        width: 1rem;
+
+        path {
+            fill: variables.$bg-box-color;
+        }
+    }
+}
