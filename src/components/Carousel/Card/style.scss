@@ -1,0 +1,76 @@
+@use "../../../styles/variables.scss";
+@use "../../../styles/mixins.scss";
+
+.card {
+    width: 90%;
+    height: 14rem;
+
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+
+    .container-img {
+        img {
+            height: 10rem;
+            border-radius: 2rem;
+            margin-bottom: 0.5rem;
+
+            border: 1px solid variables.$terciary-color;
+            box-shadow: 0 0 0.5rem variables.$terciary-color;
+
+            &.active {
+                border: 1px solid variables.$color-white;
+            }
+        }
+    }
+
+    p {
+        font-size: variables.$font-size-14;
+        color: variables.$secondary-color;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &.active {
+            color: variables.$color-white;
+        }
+    }
+}
+
+.lock {
+    width: 90%;
+
+    @include mixins.displayFlex(flex, center, center, column);
+    gap: 0.4rem;
+
+    cursor: pointer;
+
+    .container-img {
+        width: 100%;
+        height: 10rem;
+
+        @include mixins.displayFlex(flex, center, null, null);
+        border-radius: 2rem;
+
+        box-shadow: 0 0 0.5rem variables.$terciary-color;
+        border: 1px solid variables.$terciary-color;
+        background-color: #200433;
+        transition: 0.3s;
+
+        &:active {
+            border: 1px solid #fff;
+        }
+    }
+
+    p {
+        font-size: variables.$font-size-14;
+        font-weight: bold;
+        color: variables.$secondary-color;
+        transition: 0.3s;
+    }
+
+    &:active {
+        p {
+            color: variables.$color-white;
+        }
+    }
+}
