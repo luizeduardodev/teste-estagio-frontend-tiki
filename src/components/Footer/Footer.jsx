@@ -2,7 +2,7 @@ import "./style.scss";
 
 const Footer = () => {
     return (
-        <footer className="container-footer">
+        <footer id="container-footer">
             <h3>Texto Legal</h3>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. A, enim
