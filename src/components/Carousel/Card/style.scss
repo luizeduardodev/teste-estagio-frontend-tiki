@@ -9,6 +9,10 @@
     cursor: pointer;
     transition: 0.3s;
 
+    @include mixins.md(425px) {
+        height: 12rem;
+    }
+
     .container-img {
         img {
             height: 10rem;
@@ -17,6 +21,14 @@
 
             border: 1px solid variables.$terciary-color;
             box-shadow: 0 0 0.5rem variables.$terciary-color;
+
+            @include mixins.md(768px) {
+                height: 9.7rem;
+            }
+
+            @include mixins.md(425px) {
+                height: 8rem;
+            }
 
             &.active {
                 border: 1px solid variables.$color-white;
@@ -29,6 +41,10 @@
         color: variables.$secondary-color;
         font-weight: bold;
         text-transform: uppercase;
+
+        @include mixins.md(425px) {
+            font-size: 1.3rem;
+        }
 
         &.active {
             color: variables.$color-white;
@@ -56,16 +72,31 @@
         background-color: #200433;
         transition: 0.3s;
 
+        @include mixins.md(768px) {
+            height: 9.7rem;
+        }
+
+        @include mixins.md(425px) {
+            height: 8rem;
+        }
+
         &:active {
             border: 1px solid #fff;
         }
     }
 
     p {
+        margin-top: 0.5rem;
         font-size: variables.$font-size-14;
+        
         font-weight: bold;
         color: variables.$secondary-color;
         transition: 0.3s;
+        text-transform: uppercase;
+
+        @include mixins.md(425px) {
+            font-size: 1.3rem;
+        }
     }
 
     &:active {
