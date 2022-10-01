@@ -1,6 +1,6 @@
 import MainContent from "./components/MainContent/MainContent";
 
-import "./styles/app.scss";
+import "./app.scss";
 
 const App = () => {
     return (
