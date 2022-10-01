@@ -18,3 +18,10 @@
 
     opacity: $opacity;
 }
+
+//Responsividade;
+@mixin md($width) {
+    @media screen and (max-width: $width) {
+        @content;   
+    }
+}
