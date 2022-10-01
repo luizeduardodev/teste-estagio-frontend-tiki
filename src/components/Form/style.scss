@@ -4,137 +4,202 @@
 #form {
     width: 100%;
     @include mixins.displayFlex(flex, center, center, null);
-}
 
-.container-form {
-    width: 54%;
+    .container-form {
+        width: 54%;
 
-    @include mixins.displayFlex(flex, center, center, column);
-    gap: 2rem;
+        @include mixins.displayFlex(flex, center, center, column);
+        gap: 2rem;
 
-    padding-top: 8rem;
-    padding-bottom: 9rem;
-    margin-bottom: 11rem;
-    border-radius: 8rem;
+        padding-top: 8rem;
+        padding-bottom: 9rem;
+        margin-bottom: 11rem;
+        border-radius: 8rem;
 
-    text-align: center;
-    background-color: variables.$bg-box-color;
+        text-align: center;
+        background-color: variables.$bg-box-color;
 
-    h2 {
-        max-width: 35rem;
-        margin-bottom: 2rem;
-        line-height: 2.8rem;
-        font-size: variables.$font-size-18;
-
-        color: variables.$color-white;
-        text-transform: uppercase;
-    }
-
-    .design-input {
-        width: 80%;
-        height: 7rem;
-
-        padding-inline: 2.5rem;
-        border-radius: 4rem;
-        border: 0.1rem solid variables.$color-white;
-        font-size: variables.$font-size-14;
-
-        color: variables.$color-white;
-        outline: none;
-        background-color: transparent;
-        transition: 0.3s;
-
-        &::placeholder {
-            color: variables.$color-white;
+        @include mixins.md(1024px) {
+            width: 60%;
         }
 
-        &:focus {
+        @include mixins.md(768px) {
+            width: 80%;
+        }
+
+        @include mixins.md(425px) {
+            width: 95%;
+            gap: 1.5rem;
+
+            padding-top: 4rem;
+            padding-bottom: 4rem;
+            margin-bottom: 10rem;
+        }
+
+        h2 {
+            max-width: 35rem;
+            margin-bottom: 2rem;
+            line-height: 2.8rem;
+            font-size: variables.$font-size-18;
+
+            color: variables.$color-white;
+            text-transform: uppercase;
+
+            @include mixins.md(768px) {
+                font-size: 1.7rem;
+            }
+
+            @include mixins.md(425px) {
+                max-width: 30rem;
+                line-height: 2rem;
+                font-size: 1.3rem;
+                margin-bottom: 0;
+            }
+        }
+
+        .design-input {
+            width: 80%;
+            height: 7rem;
+
+            padding-inline: 2.5rem;
+            border-radius: 4rem;
+            border: 0.1rem solid variables.$color-white;
+            font-size: variables.$font-size-14;
+
+            color: variables.$color-white;
+            outline: none;
+            background-color: transparent;
+            transition: 0.3s;
+
+            @include mixins.md(768px) {
+                height: 6.5rem;
+            }
+
+            @include mixins.md(425px) {
+                height: 5rem;
+
+                font-size: 1.3rem;
+            }
+
             &::placeholder {
+                color: variables.$color-white;
+            }
+
+            &:focus {
+                &::placeholder {
+                    color: variables.$secondary-color;
+                    font-weight: bold;
+                }
+
+                border: 1px solid variables.$secondary-color;
                 color: variables.$secondary-color;
                 font-weight: bold;
             }
 
-            border: 1px solid variables.$secondary-color;
-            color: variables.$secondary-color;
-            font-weight: bold;
-        }
-
-        &:disabled {
-            &::placeholder {
-                color: #ff0000;
-                font-weight: normal;
+            &:disabled {
+                &::placeholder {
+                    color: #ff0000;
+                    font-weight: normal;
+                }
             }
         }
-    }
 
-    .container-checkbox {
-        width: 80%;
-        @include mixins.displayFlex(flex, null, center, null);
-        gap: 1rem;
+        .container-checkbox {
+            width: 80%;
+            @include mixins.displayFlex(flex, null, center, null);
+            // gap: 1rem;
 
-        .checkbox {
-            input {
-                display: none;
+            @include mixins.md(425px) {
+                width: 80%;
+            }
 
-                & + label {
-                    &::before {
-                        content: "";
-                        width: 20px;
-                        height: 20px;
+            .checkbox {
+                input {
+                    display: none;
 
-                        display: inline-block;
+                    & + label {
+                        &::before {
+                            content: "";
+                            width: 20px;
+                            height: 20px;
 
+                            display: inline-block;
+
+                            border-radius: 50%;
+                            margin-right: 0.5rem;
+                            margin-bottom: 2px;
+                            border: 1px solid variables.$color-white;
+
+                            cursor: pointer;
+                            background-color: transparent;
+                            vertical-align: middle;
+
+                            @include mixins.md(425px) {
+                                width: 15px;
+                                height: 15px;
+                                margin-bottom: 3px;
+                            }
+                        }
+                    }
+
+                    &:checked + label::before {
+                        background-image: url("../../assets/images/bola.png");
+                        background-position: center;
+                        background-size: 50%;
+                        background-repeat: no-repeat;
                         border-radius: 50%;
-                        margin-right: 0.5rem;
-                        margin-bottom: 2px;
-                        border: 1px solid variables.$color-white;
-
-                        cursor: pointer;
-                        background-color: transparent;
-                        vertical-align: middle;
                     }
                 }
+            }
 
-                &:checked + label::before {
-                    background-image: url("../../assets/images/bola.png");
-                    background-position: center;
-                    background-size: 50%;
-                    background-repeat: no-repeat;
-                    border-radius: 50%;
+            label {
+                font-size: variables.$font-size-12;
+                color: variables.$color-white;
+                font-weight: bold;
+
+                @include mixins.md(425px) {
+                    font-size: 1rem;
                 }
             }
         }
 
-        label {
-            font-size: variables.$font-size-12;
-            color: variables.$color-white;
+        button {
+            width: 80%;
+            height: 7rem;
+            margin-top: 1.5rem;
+
+            font-size: variables.$font-size-24;
+            border-radius: 4rem;
+            box-shadow: 0.2rem 0.4rem 0 variables.$secondary-color;
+
+            cursor: pointer;
+            text-transform: uppercase;
+            color: variables.$bg-box-color;
+            outline: none;
+            border: none;
             font-weight: bold;
-        }
-    }
+            transition: 0.3s;
 
-    button {
-        width: 80%;
-        height: 7rem;
-        margin-top: 1.5rem;
+            @include mixins.md(768px) {
+                height: 6.5rem;
 
-        font-size: variables.$font-size-24;
-        border-radius: 4rem;
-        box-shadow: 0.2rem 0.4rem 0 variables.$secondary-color;
+                font-size: 2.2rem;
+            }
 
-        cursor: pointer;
-        text-transform: uppercase;
-        color: variables.$bg-box-color;
-        outline: none;
-        border: none;
-        font-weight: bold;
-        transition: 0.3s;
+            @include mixins.md(425px) {
+                height: 5rem;
 
-        &:hover {
-            transform: translateY(3px);
+                margin-top: 1rem;
+                font-size: 1.8rem;
+            }
 
-            color: variables.$color-white;
-            background-color: variables.$terciary-color;
-            box-shadow: 0.2rem 0.4rem 0 variables.$color-white;
+            &:hover {
+                transform: translateY(3px);
+
+                color: variables.$color-white;
+                background-color: variables.$terciary-color;
+                box-shadow: 0.2rem 0.4rem 0 variables.$color-white;
+            }
         }
     }
 }
