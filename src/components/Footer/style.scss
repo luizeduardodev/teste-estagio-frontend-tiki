@@ -1,10 +1,15 @@
 @use "../../styles/variables.scss";
+@use "../../styles/mixins.scss";
 
 #container-footer {
     margin-bottom: 12rem;
 
     text-align: center;
     color: variables.$color-white;
+
+    @include mixins.md(425px) {
+        margin-bottom: 10rem;
+    }
 
     h3 {
         font-size: variables.$font-size-18;
@@ -16,6 +21,11 @@
 
     p {
         font-size: variables.$font-size-10;
+
+        @include mixins.md(425px) {
+            max-width: 380px;
+            // font-size: 0.9rem;       
+        }
 
         &:not(:last-child) {
             margin-bottom: 1rem;
