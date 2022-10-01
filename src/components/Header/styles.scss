@@ -1,3 +1,5 @@
+@use "../../styles/mixins.scss";
+
 #header {
     width: 100%;
     text-align: center;
@@ -5,5 +7,15 @@
     .brand {
         width: 40%;
         padding-bottom: 9rem;
+
+        @include mixins.md(768px) {
+            width: 35%;
+            padding-bottom: 7rem;
+        }
+
+        @include mixins.md(425px) {
+            width: 60%;
+            padding-bottom: 6rem;
+        }
     }
 }
