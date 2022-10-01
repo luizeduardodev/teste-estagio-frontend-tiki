@@ -17,12 +17,36 @@
 
         padding-top: 8rem;
 
+        @include mixins.md(1024px) {
+            width: 95%;
+        }
+
+        @include mixins.md(768px) {
+            padding-top: 7rem;
+        }
+
+        @include mixins.md(425px) {
+            padding-top: 6rem;
+        }
+
         .quero-fazer-parte {
             margin-bottom: 8rem;
+
+            @include mixins.md(768px) {
+                width: 80%;
+            }
+
+            @include mixins.md(425px) {
+                margin-bottom: 7rem;
+            }
         }
 
         .icon-yelloww {
             margin-bottom: 8rem;
+
+            @include mixins.md(425px) {
+                margin-bottom: 7rem;
+            }
         }
     }
 }
