@@ -1,12 +1,32 @@
+@use "../../../styles/mixins.scss";
+
 .icon-yellow {
     margin-bottom: 7rem;
+
+    @include mixins.md(425px) {
+        margin-bottom: 6rem;
+    }
 }
 
 .image-spoilers {
     margin-bottom: 12rem;
     width: 755.34px;
+
+    @include mixins.md(768px) {
+        width: 600px;
+    }
+
+    @include mixins.md(425px) {
+        width: 350px;
+        margin-bottom: 11rem;
+    }
 }
 
 .icon-arrow-down {
     margin-bottom: 8rem;
+
+    @include mixins.md(425px) {
+        width: 3rem;
+        margin-bottom: 7rem;
+    }
 }
