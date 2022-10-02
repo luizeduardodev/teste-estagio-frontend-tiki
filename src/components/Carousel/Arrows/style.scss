@@ -4,8 +4,8 @@
 .container-arrow {
     @include mixins.displayFlex(flex, center, center, null);
 
-    width: 3.5rem;
-    height: 3rem;
+    width: 3.8rem;
+    height: 3.5rem;
     margin-top: 3rem;
 
     box-shadow: 0.2rem 0.2rem 0 variables.$secondary-color;
