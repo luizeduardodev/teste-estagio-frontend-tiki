@@ -30,8 +30,7 @@
             width: 95%;
             gap: 1.5rem;
 
-            padding-top: 4rem;
-            padding-bottom: 4rem;
+            padding-block: 4rem;
             margin-bottom: 10rem;
         }
 
@@ -50,9 +49,13 @@
 
             @include mixins.md(425px) {
                 max-width: 30rem;
-                line-height: 2rem;
                 font-size: 1.3rem;
+                line-height: 2rem;
                 margin-bottom: 0;
+            }
+
+            @include mixins.md(375px) {
+                font-size: 1.2rem;
             }
         }
 
@@ -80,6 +83,10 @@
                 font-size: 1.3rem;
             }
 
+            @include mixins.md(375px) {
+                font-size: 1.2rem;
+            }
+
             &::placeholder {
                 color: variables.$color-white;
                 font-weight: bold;
@@ -100,7 +107,6 @@
         .container-checkbox {
             width: 80%;
             @include mixins.displayFlex(flex, null, center, null);
-            // gap: 1rem;
 
             @include mixins.md(425px) {
                 width: 80%;
@@ -184,6 +190,10 @@
 
                 margin-top: 1rem;
                 font-size: 1.8rem;
+            }
+
+            @include mixins.md(375px) {
+                font-size: 1.6rem;
             }
         }
     }
