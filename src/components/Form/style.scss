@@ -34,6 +34,10 @@
             margin-bottom: 10rem;
         }
 
+        @include mixins.md(320px) {
+            padding-block: 3rem;
+        }
+
         h2 {
             max-width: 35rem;
             margin-bottom: 2rem;
@@ -56,6 +60,11 @@
 
             @include mixins.md(375px) {
                 font-size: 1.2rem;
+            }
+
+            @include mixins.md(320px) {
+                font-size: 1rem;
+                max-width: 21rem;
             }
         }
 
@@ -85,6 +94,11 @@
 
             @include mixins.md(375px) {
                 font-size: 1.2rem;
+            }
+
+            @include mixins.md(320px) {
+                height: 4.5rem;
+                font-size: 1rem;
             }
 
             &::placeholder {
@@ -138,6 +152,11 @@
                                 height: 15px;
                                 margin-bottom: 3px;
                             }
+
+                            @include mixins.md(320px) {
+                                width: 13px;
+                                height: 13px;
+                            }
                         }
                     }
 
@@ -158,6 +177,10 @@
 
                 @include mixins.md(425px) {
                     font-size: 1rem;
+                }
+
+                @include mixins.md(320px) {
+                    font-size: 0.9rem;
                 }
             }
         }
@@ -194,6 +217,11 @@
 
             @include mixins.md(375px) {
                 font-size: 1.6rem;
+            }
+
+            @include mixins.md(320px) {
+                height: 4.5rem;
+                font-size: 1.4rem;
             }
         }
     }

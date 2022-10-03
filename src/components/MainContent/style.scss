@@ -47,6 +47,10 @@
             @include mixins.md(425px) {
                 margin-bottom: 7rem;
             }
+
+            @include mixins.md(320px) {
+                width: 5%;
+            }
         }
     }
 }

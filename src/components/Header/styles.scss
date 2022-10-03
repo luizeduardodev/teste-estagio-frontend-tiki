@@ -17,5 +17,9 @@
             width: 60%;
             padding-bottom: 6rem;
         }
+
+        @include mixins.md(320px) {
+            width: 55%;
+        }
     }
 }

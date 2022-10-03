@@ -6,6 +6,10 @@
     @include mixins.md(425px) {
         margin-bottom: 6rem;
     }
+
+    @include mixins.md(320px) {
+        width: 5%;
+    }
 }
 
 .image-spoilers {
@@ -24,8 +28,13 @@
         width: 350px;
         margin-bottom: 11rem;
     }
+
     @include mixins.md(375px) {
         width: 300px;  
+    }
+
+    @include mixins.md(320px) {
+        width: 250px;
     }
 }
 
@@ -39,5 +48,9 @@
 
     @include mixins.md(375px) {
         width: 2.5rem;   
+    }
+
+    @include mixins.md(320px) {
+        width: 2rem;
     }
 }

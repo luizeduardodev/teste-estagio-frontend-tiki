@@ -21,6 +21,10 @@
         @include mixins.md(375px) {
             font-size: 1.5rem;
         }
+
+        @include mixins.md(320px) {
+            font-size: 1.3rem;
+        }
     }
 
     p {
@@ -38,6 +42,10 @@
         @include mixins.md(375px) {
             max-width: 320px;
             font-size: 0.9rem;
+        }
+        @include mixins.md(320px) {
+            max-width: 250px;
+            font-size: 0.8rem;
         }
 
         &:not(:last-child) {
