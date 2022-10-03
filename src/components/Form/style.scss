@@ -218,6 +218,10 @@
                     background: #634e70;
                     color: variables.$bg-box-color;
                 }
+
+                &:not(:disabled) {
+                    color: #fff;
+                }
             }
 
             @include mixins.md(375px) {
