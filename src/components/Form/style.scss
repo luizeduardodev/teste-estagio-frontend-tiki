@@ -11,8 +11,7 @@
         @include mixins.displayFlex(flex, center, center, column);
         gap: 2rem;
 
-        padding-top: 8rem;
-        padding-bottom: 9rem;
+        padding-block: 8rem;
         margin-bottom: 11rem;
         border-radius: 8rem;
 
@@ -83,6 +82,7 @@
 
             &::placeholder {
                 color: variables.$color-white;
+                font-weight: bold;
             }
 
             &:focus {
@@ -94,13 +94,6 @@
                 border: 1px solid variables.$secondary-color;
                 color: variables.$secondary-color;
                 font-weight: bold;
-            }
-
-            &:disabled {
-                &::placeholder {
-                    color: #ff0000;
-                    font-weight: normal;
-                }
             }
         }
 
@@ -191,14 +184,6 @@
 
                 margin-top: 1rem;
                 font-size: 1.8rem;
-            }
-
-            &:hover {
-                transform: translateY(3px);
-
-                color: variables.$color-white;
-                background-color: variables.$terciary-color;
-                box-shadow: 0.2rem 0.4rem 0 variables.$color-white;
             }
         }
     }
