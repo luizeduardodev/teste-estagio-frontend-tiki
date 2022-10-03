@@ -198,23 +198,11 @@
                 padding-inline: 5rem;
             }
 
-            //Pagination;
-            .cVXxbE {
-                @include mixins.pagination(
-                    1rem,
-                    1rem,
-                    0.5rem,
-                    50%,
-                    none,
-                    all 250ms ease,
-                    #fff,
-                    null
-                );
-
-                @include mixins.md(425px) {
+            .gnDOZy {
+                .goodpl {
                     @include mixins.pagination(
-                        0.8rem,
-                        0.8rem,
+                        1rem,
+                        1rem,
                         0.5rem,
                         50%,
                         none,
@@ -222,51 +210,38 @@
                         #fff,
                         null
                     );
+
+                    @include mixins.md(425px) {
+                        @include mixins.pagination(
+                            0.8rem,
+                            0.8rem,
+                            0.5rem,
+                            50%,
+                            none,
+                            all 250ms ease,
+                            #fff,
+                            null
+                        );
+                    }
+
+                    @include mixins.md(375px) {
+                        @include mixins.pagination(
+                            0.6rem,
+                            0.6rem,
+                            0.5rem,
+                            50%,
+                            none,
+                            all 250ms ease,
+                            #fff,
+                            null
+                        );
+                    }
                 }
 
-                @include mixins.md(375px) {
+                .hrBmXS {
                     @include mixins.pagination(
-                        0.6rem,
-                        0.6rem,
-                        0.5rem,
-                        50%,
-                        none,
-                        all 250ms ease,
-                        #fff,
-                        null
-                    );
-                }
-            }
-
-            .ezKHIn {
-                @include mixins.pagination(
-                    1rem,
-                    1rem,
-                    0.5rem,
-                    50%,
-                    none,
-                    all 250ms ease,
-                    #fff,
-                    30%
-                );
-
-                @include mixins.md(425px) {
-                    @include mixins.pagination(
-                        0.8rem,
-                        0.8rem,
-                        0.5rem,
-                        50%,
-                        none,
-                        all 250ms ease,
-                        #fff,
-                        30%
-                    );
-                }
-
-                @include mixins.md(375px) {
-                    @include mixins.pagination(
-                        0.6rem,
-                        0.6rem,
+                        1rem,
+                        1rem,
                         0.5rem,
                         50%,
                         none,
@@ -274,6 +249,32 @@
                         #fff,
                         30%
                     );
+
+                    @include mixins.md(425px) {
+                        @include mixins.pagination(
+                            0.8rem,
+                            0.8rem,
+                            0.5rem,
+                            50%,
+                            none,
+                            all 250ms ease,
+                            #fff,
+                            30%
+                        );
+                    }
+
+                    @include mixins.md(375px) {
+                        @include mixins.pagination(
+                            0.6rem,
+                            0.6rem,
+                            0.5rem,
+                            50%,
+                            none,
+                            all 250ms ease,
+                            #fff,
+                            30%
+                        );
+                    }
                 }
             }
 
