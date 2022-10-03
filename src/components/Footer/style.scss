@@ -17,6 +17,10 @@
 
         font-weight: bold;
         text-transform: uppercase;
+
+        @include mixins.md(375px) {
+            font-size: 1.5rem;
+        }
     }
 
     p {
@@ -25,7 +29,11 @@
 
         @include mixins.md(425px) {
             max-width: 380px;
-            // font-size: 0.9rem;       
+        }
+
+        @include mixins.md(375px) {
+            max-width: 320px;
+            font-size: 0.9rem;
         }
 
         &:not(:last-child) {
