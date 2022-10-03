@@ -24,6 +24,10 @@
         text-transform: uppercase;
         font-weight: bold;
 
+        @include mixins.md(800px) {
+            font-size: 3rem;
+        }
+
         @include mixins.md(768px) {
             font-size: 2.5rem;
         }
@@ -70,7 +74,7 @@
             box-shadow: 0 0 5px variables.$terciary-color;
             cursor: pointer;
 
-            @include mixins.md(768px) {
+            @include mixins.md(800px) {
                 width: 95%;
             }
         }

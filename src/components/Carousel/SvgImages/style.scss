@@ -12,6 +12,10 @@
     margin-bottom: 12rem;
     width: 755.34px;
 
+    @include mixins.md(800px) {
+        width: 650px;
+    }
+
     @include mixins.md(768px) {
         width: 600px;
     }

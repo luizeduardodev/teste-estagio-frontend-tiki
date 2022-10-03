@@ -27,6 +27,10 @@
         font-size: variables.$font-size-10;
         font-weight: bold;
 
+        @include mixins.md(800px) {
+            max-width: 700px;
+        }
+
         @include mixins.md(425px) {
             max-width: 380px;
         }
