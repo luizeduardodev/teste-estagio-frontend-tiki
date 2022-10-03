@@ -213,6 +213,11 @@
 
                 margin-top: 1rem;
                 font-size: 1.8rem;
+
+                &:disabled {
+                    color: variables.$bg-box-color;
+                    background-color: #634E70;
+                }
             }
 
             @include mixins.md(375px) {
