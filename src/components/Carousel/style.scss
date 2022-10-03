@@ -32,6 +32,11 @@
             font-size: 2rem;
             padding-top: 6rem;
         }
+
+        @include mixins.md(375px) {
+            font-size: 1.8rem;
+            padding-top: 5rem;
+        }
     }
 
     .card-title {
@@ -44,6 +49,10 @@
 
         @include mixins.md(425px) {
             font-size: 1.3rem;
+        }
+
+        @include mixins.md(375px) {
+            font-size: 1.2rem;
         }
     }
 
@@ -103,9 +112,18 @@
                     gap: 0.5rem;
                 }
 
+                @include mixins.md(375px) {
+                    height: 5.5rem;
+                    gap: 0.3rem;
+                }
+
                 .share-title {
                     @include mixins.md(425px) {
                         font-size: 1.1rem;
+                    }
+
+                    @include mixins.md(375px) {
+                        font-size: 1rem;
                     }
                 }
 
@@ -117,6 +135,10 @@
 
                         @include mixins.md(425px) {
                             width: 80%;
+                        }
+
+                        @include mixins.md(375px) {
+                            width: 75%;
                         }
                     }
                 }
@@ -136,6 +158,10 @@
 
         @include mixins.displayFlex(flex, null, center, column);
 
+        @include mixins.md(375px) {
+            margin-bottom: 5rem;
+        }
+
         .carousel-title {
             margin-bottom: 2rem;
 
@@ -150,6 +176,10 @@
             @include mixins.md(425px) {
                 font-size: 1.3rem;
             }
+
+            @include mixins.md(375px) {
+                font-size: 1.2rem;
+            }
         }
 
         .carousel-cards {
@@ -162,6 +192,10 @@
 
             @include mixins.md(425px) {
                 padding-inline: 1.5rem;
+            }
+
+            @include mixins.md(375px) {
+                padding-inline: 5rem;
             }
 
             //Pagination;
@@ -189,6 +223,19 @@
                         null
                     );
                 }
+
+                @include mixins.md(375px) {
+                    @include mixins.pagination(
+                        0.6rem,
+                        0.6rem,
+                        0.5rem,
+                        50%,
+                        none,
+                        all 250ms ease,
+                        #fff,
+                        null
+                    );
+                }
             }
 
             .ezKHIn {
@@ -207,6 +254,19 @@
                     @include mixins.pagination(
                         0.8rem,
                         0.8rem,
+                        0.5rem,
+                        50%,
+                        none,
+                        all 250ms ease,
+                        #fff,
+                        30%
+                    );
+                }
+
+                @include mixins.md(375px) {
+                    @include mixins.pagination(
+                        0.6rem,
+                        0.6rem,
                         0.5rem,
                         50%,
                         none,
