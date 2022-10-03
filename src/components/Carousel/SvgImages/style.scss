@@ -20,6 +20,9 @@
         width: 350px;
         margin-bottom: 11rem;
     }
+    @include mixins.md(375px) {
+        width: 300px;  
+    }
 }
 
 .icon-arrow-down {
@@ -28,5 +31,9 @@
     @include mixins.md(425px) {
         width: 3rem;
         margin-bottom: 7rem;
+    }
+
+    @include mixins.md(375px) {
+        width: 2.5rem;   
     }
 }
