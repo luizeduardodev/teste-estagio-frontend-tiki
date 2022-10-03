@@ -85,6 +85,10 @@
             width: 60%;
         }
 
+        @include mixins.md(375px) {
+            width: 100%;
+        }
+
         &:active {
             border: 1px solid #fff;
         }
