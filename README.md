@@ -29,4 +29,4 @@ $ npm install
 <p>Esse projeto foi desenvolvido com as seguintes tecnologias:</p>
 
 - ReactJS
-- Sass
+- SCSS
