@@ -220,7 +220,8 @@
                 }
 
                 &:not(:disabled) {
-                    color: #fff;
+                    column-rule: variables.$bg-box-color;
+                    background: #fff;
                 }
             }
 
