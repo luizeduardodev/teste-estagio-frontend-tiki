@@ -32,10 +32,11 @@ const Carousel = () => {
         <Card title="26 de março" image={lock} className="lock" />
     ];
 
-    const breakPoints = [
-        { width: 375, itemsToShow: 2, itemsToScroll: 2},
-        { width: 425, itemsToShow: 3, itemsToScroll: 3},
-        { width: 768, itemsToShow: 4, itemsToScroll: 4 },
+    const breakPointsCarousel = [
+        { width: 320, itemsToShow: 1, itemsToScroll: 1 },
+        { width: 375, itemsToShow: 2, itemsToScroll: 2 },
+        { width: 425, itemsToShow: 3, itemsToScroll: 3 },
+        { width: 768, itemsToShow: 4, itemsToScroll: 4 }
     ];
 
     const myArrow = ({ type, onClick }) => {
@@ -149,7 +150,7 @@ const Carousel = () => {
                         itemsToShow={4}
                         itemsToScroll={4}
                         renderArrow={myArrow}
-                        breakPoints={breakPoints}
+                        breakPoints={breakPointsCarousel}
                     >
                         {cards.length > 0 && cards.map((card) => card)}
                     </CarouselElastic>
