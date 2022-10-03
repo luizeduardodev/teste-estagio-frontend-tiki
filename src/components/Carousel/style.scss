@@ -36,7 +36,7 @@
 
     .card-title {
         font-size: variables.$font-size-14;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
 
         color: variables.$color-white;
         text-transform: uppercase;
@@ -58,7 +58,7 @@
             max-width: 85rem;
             border-radius: 4rem;
 
-            box-shadow: 0 0 0.1rem variables.$terciary-color;
+            box-shadow: 0 0 5px variables.$terciary-color;
             cursor: pointer;
 
             @include mixins.md(768px) {
@@ -137,7 +137,7 @@
         @include mixins.displayFlex(flex, null, center, column);
 
         .carousel-title {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
 
             text-transform: uppercase;
             color: variables.$color-white;
