@@ -197,6 +197,7 @@
             cursor: pointer;
             text-transform: uppercase;
             color: variables.$bg-box-color;
+            background: #634E70;
             outline: none;
             border: none;
             font-weight: bold;
@@ -214,10 +215,9 @@
                 margin-top: 1rem;
                 font-size: 1.8rem;
 
-                &:disabled {
-                    color: variables.$bg-box-color;
-                    background-color: #634E70;
-                }
+                // &:disabled {
+                //     color: variables.$bg-box-color;
+                // }
             }
 
             @include mixins.md(375px) {
