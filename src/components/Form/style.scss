@@ -22,7 +22,7 @@
             width: 60%;
         }
 
-        @include mixins.md(768px) {
+        @include mixins.md(800px) {
             width: 80%;
         }
 

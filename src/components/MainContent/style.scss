@@ -32,7 +32,7 @@
         .quero-fazer-parte {
             margin-bottom: 8rem;
 
-            @include mixins.md(768px) {
+            @include mixins.md(800px) {
                 width: 80%;
             }
 
