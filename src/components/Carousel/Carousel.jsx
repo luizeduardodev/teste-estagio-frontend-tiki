@@ -152,7 +152,10 @@ const Carousel = () => {
                         renderArrow={myArrow}
                         breakPoints={breakPointsCarousel}
                     >
-                        {cards.length > 0 && cards.map((card) => card)}
+                        {cards.length > 0 &&
+                            cards.map((card, index) => (
+                                <div key={index}>{card}</div>
+                        ))}
                     </CarouselElastic>
                 </div>
             </div>
