@@ -154,8 +154,10 @@ const Carousel = () => {
                     >
                         {cards.length > 0 &&
                             cards.map((card, index) => (
-                                <div key={index}>{card}</div>
-                        ))}
+                                <div className="container" key={index}>
+                                    {card}
+                                </div>
+                            ))}
                     </CarouselElastic>
                 </div>
             </div>

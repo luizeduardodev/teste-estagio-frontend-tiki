@@ -1,26 +1,90 @@
 @use "../../../styles/variables.scss";
 @use "../../../styles/mixins.scss";
 
-.card {
-    width: 90%;
-    height: 14rem;
+.container {
+    width: 100%;
 
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s;
+    .card {
+        width: 90%;
+        height: 14rem;
 
-    @include mixins.md(425px) {
-        height: 12rem;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.3s;
+
+        @include mixins.md(425px) {
+            height: 12rem;
+        }
+
+        .container-img {
+            img {
+                height: 10rem;
+                border-radius: 2rem;
+                margin-bottom: 0.5rem;
+
+                border: 1px solid variables.$terciary-color;
+                box-shadow: 0 0 0.5rem variables.$terciary-color;
+
+                @include mixins.md(768px) {
+                    height: 9.7rem;
+                }
+
+                @include mixins.md(425px) {
+                    height: 8rem;
+                }
+
+                &.active {
+                    border: 1px solid variables.$color-white;
+                }
+            }
+        }
+
+        p {
+            font-size: variables.$font-size-14;
+            color: variables.$secondary-color;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            @include mixins.md(425px) {
+                font-size: 1.3rem;
+            }
+
+            &.active {
+                color: variables.$color-white;
+            }
+        }
     }
+}
 
-    .container-img {
-        img {
+.container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .lock {
+        width: 90%;
+
+        @include mixins.displayFlex(flex, center, center, column);
+        gap: 0.4rem;
+
+        cursor: pointer;
+
+        @include mixins.md(425px) {
+            width: 90%;
+        }
+
+        .container-img {
+            width: 100%;
             height: 10rem;
-            border-radius: 2rem;
-            margin-bottom: 0.5rem;
 
-            border: 1px solid variables.$terciary-color;
+            @include mixins.displayFlex(flex, center, null, null);
+            border-radius: 2rem;
+
             box-shadow: 0 0 0.5rem variables.$terciary-color;
+            border: 1px solid variables.$terciary-color;
+            background-color: #200433;
+            transition: 0.3s;
 
             @include mixins.md(768px) {
                 height: 9.7rem;
@@ -28,93 +92,40 @@
 
             @include mixins.md(425px) {
                 height: 8rem;
+                width: 60%;
             }
 
-            &.active {
-                border: 1px solid variables.$color-white;
+            @include mixins.md(375px) {
+                width: 100%;
+            }
+
+            @include mixins.md(320px) {
+                width: 92%;
+            }
+
+            &:active {
+                border: 1px solid #fff;
             }
         }
-    }
 
-    p {
-        font-size: variables.$font-size-14;
-        color: variables.$secondary-color;
-        font-weight: bold;
-        text-transform: uppercase;
+        p {
+            margin-top: 0.5rem;
+            font-size: variables.$font-size-14;
 
-        @include mixins.md(425px) {
-            font-size: 1.3rem;
-        }
+            font-weight: bold;
+            color: variables.$secondary-color;
+            transition: 0.3s;
+            text-transform: uppercase;
 
-        &.active {
-            color: variables.$color-white;
-        }
-    }
-}
-
-.lock {
-    width: 90%;
-
-    @include mixins.displayFlex(flex, center, center, column);
-    gap: 0.4rem;
-
-    cursor: pointer;
-
-    @include mixins.md(425px) {
-        width: 90%;
-    }
-
-    .container-img {
-        width: 100%;
-        height: 10rem;
-
-        @include mixins.displayFlex(flex, center, null, null);
-        border-radius: 2rem;
-
-        box-shadow: 0 0 0.5rem variables.$terciary-color;
-        border: 1px solid variables.$terciary-color;
-        background-color: #200433;
-        transition: 0.3s;
-
-        @include mixins.md(768px) {
-            height: 9.7rem;
-        }
-
-        @include mixins.md(425px) {
-            height: 8rem;
-            width: 60%;
-        }
-
-        @include mixins.md(375px) {
-            width: 100%;
-        }
-
-        @include mixins.md(320px) {
-            width: 92%;
+            @include mixins.md(425px) {
+                font-size: 1.3rem;
+            }
         }
 
         &:active {
-            border: 1px solid #fff;
-        }
-    }
-
-    p {
-        margin-top: 0.5rem;
-        font-size: variables.$font-size-14;
-
-        font-weight: bold;
-        color: variables.$secondary-color;
-        transition: 0.3s;
-        text-transform: uppercase;
-
-        @include mixins.md(425px) {
-            font-size: 1.3rem;
-        }
-    }
-
-    &:active {
-        p {
-            color: variables.$color-white;
+            p {
+                color: variables.$color-white;
+            }
         }
     }
 }
